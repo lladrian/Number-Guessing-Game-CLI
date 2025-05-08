@@ -7,8 +7,6 @@ const rl = readline.createInterface({
 });
 
 // Parse command line arguments
-const args = process.argv.slice(2);
-const command = args[0];
 
 function printUsage() {
   console.log('\nUsage: node cli_task_tracker.js');
