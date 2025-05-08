@@ -48,7 +48,8 @@ function start_game(chances) {
                     console.log(`Congratulations! You guessed the correct number in ${attempts} attempts.`);
                     console.log(`It took you ${timeDiff} seconds.`);
                    // rl.close();
-                    selectDifficulty(); // Ask again
+                   // selectDifficulty(); // Ask again
+                    start_again();
                 }
             });
         } else {
@@ -57,13 +58,37 @@ function start_game(chances) {
             console.log(`\nSorry! You've used all your chances. The correct number was ${numberToGuess}.`);
             console.log(`You took ${timeDiff} seconds.`);
            // rl.close();
-            selectDifficulty(); // Ask again
+           // selectDifficulty(); // Ask again
+            start_again();
         }
     };
 
     guessNumber();
 }
 
+function start_again() {
+
+     rl.question('\nDo you want to play again? (yes/no): ', (choice) => {
+        switch (choice) {
+            case 'yes': {
+                selectDifficulty(); // Ask again         
+                break;
+            }
+        
+            case 'no': {
+                console.log('Game exited.');
+                rl.close();
+                break;
+            }
+        
+            default: {
+                console.log('Invalid choice.');
+                start_again(); // Ask again
+                break;
+            }
+        }
+    });
+}
 const selectDifficulty = () => {
     console.log('\nWelcome to the Number Guessing Game!');
     console.log('Please select the difficulty level:');
@@ -95,7 +120,8 @@ const selectDifficulty = () => {
 
             case '4': {
                 printUsage();
-                rl.close();
+                start_again(); // Ask again
+               // rl.close();
                 break;
             }
         
