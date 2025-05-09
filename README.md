@@ -22,7 +22,7 @@ the game will end, and the user will win. Otherwise, the game will continue unti
 2. Clone or download this project.
 
 3. To run use this command : "node cli_number_guessing_game.js"
-  - Usage: node cli_task_tracker.js
+  - Usage: node cli_number_guessing_game.js
   - Prompts:
       -  **1**       Easy(10)
       -  **2**       Medium(5)
