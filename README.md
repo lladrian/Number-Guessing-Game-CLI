@@ -1,4 +1,4 @@
-# CLI Nuber Guessing Game
+# CLI Number Guessing Game
 
 
 A simple command-line number guessing game where the computer randomly selects a number and the user has to guess it. 
@@ -24,10 +24,10 @@ the game will end, and the user will win. Otherwise, the game will continue unti
 3. To run use this command : "node cli_number_guessing_game.js"
   - Usage: node cli_task_tracker.js
   - Prompts:
-      -  1       Easy(10)
-      -  2       Medium(5)
-      -  3       Hard(3)
-      -  4       Show this help message
-      -  5       Quit
+      -  **1**       Easy(10)
+      -  **2**       Medium(5)
+      -  **3**       Hard(3)
+      -  **4**       Show this help message
+      -  **5**       Quit
 
 4. https://roadmap.sh/projects/number-guessing-game
